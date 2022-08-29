@@ -1,0 +1,1939 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-areas: "nav-bar nav-bar nav-bar nav-bar"
+    "Mytunes Mytunes Mytunes Mytunes"
+    "Music Music Music Music"
+    "Video Video Video Video"
+    "sky sky sky sky"
+    "G-Cards G-Cards G-Cards G-Cards"
+    "Footer Footer Footer Footer"
+    "Footer-Copyright Footer-Copyright Footer-Copyright Footer-Copyright";
+}
+.nav-bar{
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    height: 7vh;
+    border-bottom: 1px solid white;
+    padding-top: 13px;
+    grid-area: nav-bar;
+}
+.nav-bar > a{
+    color:white;
+    font-size: 26px;
+    text-decoration: none;
+    padding: 30px;
+}
+.nav-bar > a:hover{
+    color:yellow;
+}
+.Mytunes{
+    background-image: url("https://media.istockphoto.com/photos/studio-condenser-microphone-on-black-background-picture-id1217982570?k=20&m=1217982570&s=612x612&w=0&h=OkOmuKU4r8nk-7epT25el20lzl5p-juLpbVWWd9p1XE=");
+    background-position: bottom -350px left 0px;
+    background-repeat: no-repeat;
+    background-size: 1530px;
+    height: 90vh;
+    color:white;
+    grid-area: Mytunes;
+}
+.Mytunes > h1{
+    text-align: center;
+    padding-top: 195px; /* Make Changes here in media query to 35px*/
+    font-size: 67px;
+    color:white;
+}
+.Mytunes > h3{
+    text-align: center;
+    padding-top: 25px;
+    color:white;
+    font-size: 32px;
+}
+.Mytunes > p{
+    text-align: center;
+    padding-top: 25px;
+    padding-left: 60px;
+    padding-right: 60px;
+    line-height: 30px;
+    color:white;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.Music{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
+    height: 140vh;  /* Make Changes here in media query to 180px*/
+    grid-area: Music;
+}
+.Music > i {
+    font-size: 42px;
+    padding: 50px 5px 40px 0px;
+}
+.Music > span {
+    font-size: 42px;
+}
+.Music > .para1 {
+    color:white;
+    padding: 30px 35px 40px 35px;
+    line-height: 30px;
+    font-size: 22px;
+}
+.Music > a {
+    background-color: red;
+    color:white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 18px;
+}
+.Music > .para2 {
+    color:white;
+    font-size: 18px;
+    padding-top: 60px;
+    padding-left: 50px;
+}
+.Music > img {
+    padding-bottom: 150px;
+    height: 600px; /* make changes in height & width to 300px in media query */
+    width: 890px;
+}
+.Video{
+    background-color: white;
+    height: 170vh; /* after decreasing height & width of video class image, increase height of video class to 280vh in media query */
+    color:black;
+    text-align: center;
+    grid-area: Video;
+}
+.Video > .head1 {
+    padding-top: 100px;  /* padding-top : 60px in media-query */
+    padding-bottom: 35px;
+}
+.Video > .para3 {
+    color: rgba(0,0,0,0.8);
+    font-size: 25px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.Video > a {
+    background-color: rgb(24, 64, 194);
+    color:white;
+    padding: 20px;
+    font-size: 18px;
+    text-decoration: none;
+}
+.Video > img {
+    width: 900px; /* Make changes in width & height in media-query width:300px & height:300px */
+    height: 800px;
+}
+.sky{
+    height: 100vh; /* increase height to 200vh so that footer stick to the bottom */
+    color: white;
+    background-image: url("/IMG/starry-sky-2051448__340.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom 0px left 0px;
+    background-size: 1250px;
+    grid-area: sky;
+}
+.sky > h1 {
+    padding-top: 260px; /* Make Changes here in media query to 500px*/
+    padding-left: 110px; /* Make Changes here in media query to 100px*/
+    font-size: 34px;
+}
+.sky > p {
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 35px;
+    font-size: 25px;
+}
+.G-Cards{
+    height: 50vh;
+    padding: 10px; /* padding : 5px in media query*/
+    background-color: white;
+    color: black;
+    grid-area: G-Cards;
+}
+.G-Cards > .card {
+    float: left; /* comment out in media query for max-width:600px */
+    padding-top: 40px;
+    padding-left: 40px; /* padding : 5px in media query */
+    width: 50%;
+}
+.G-Cards .card > img {
+    width: 470px; /* width & height : 300px in media query */
+    height: 270px;
+}
+.G-Cards .card-content > h1{
+    padding-top: 50px;
+    padding-left: 40px; /* padding-left : 70px in media query */
+    color:black;
+}
+.G-Cards .card-content > .gpara1{
+    padding-top: 20px;
+    font-size: 18px;
+}
+.G-Cards .card-content > .gpara2{
+    padding-top: 20px;
+    font-size: 18px;
+}
+.G-Cards a {
+    text-decoration: none;
+    font-size: 18px;
+}
+.G-Cards a::before {
+    content: ">";
+    text-decoration: none;
+    font-weight: bold;
+}
+.Footer{
+    height: 32vh;   /* Make changes in media-query in height:185vh; */
+    /* Add margin-top:380px; in media query */
+    color:white;
+    padding: 0px 70px 0px 70px; /* make changes in media-query in padding:50px; */
+    background-color: rgba(0,0,0,0.9);
+    grid-area: Footer;
+}
+.footer-content > div{
+    padding: 55px;
+    float: left;   /* Comment out in media query */
+}
+.footer > .shop {
+    width: 25%;
+}
+.footer > .Store {
+    width: 25%;
+}
+.footer > .Business {
+    width: 25%;
+}
+.footer > .about {
+    width: 25%;
+}
+.Footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.Footer a {
+    text-decoration: none;
+    color:white;
+}
+.Footer-Copyright{
+    height: 8vh;
+    background-color: rgba(0,0,0,0.7);
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    grid-area: Footer-Copyright;
+}
+.Footer-Copyright p{
+padding: 18px;
+}
+
+@media only screen and (min-width:320px){
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: "nav-bar nav-bar nav-bar nav-bar"
+        "Mytunes Mytunes Mytunes Mytunes"
+        "Music Music Music Music"
+        "Video Video Video Video"
+        "sky sky sky sky"
+        "G-Cards G-Cards G-Cards G-Cards"
+        "Footer Footer Footer Footer"
+        "Footer-Copyright Footer-Copyright Footer-Copyright Footer-Copyright";
+    }
+    .nav-bar{
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        height: 7vh;
+        border-bottom: 1px solid white;
+        padding-top: 13px;
+        grid-area: nav-bar;
+    }
+    .nav-bar > a{
+        color:white;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 6px;
+    }
+    .nav-bar > a:hover{
+        color:yellow;
+    }
+    .Mytunes{
+        background-image: url("https://media.istockphoto.com/photos/studio-condenser-microphone-on-black-background-picture-id1217982570?k=20&m=1217982570&s=612x612&w=0&h=OkOmuKU4r8nk-7epT25el20lzl5p-juLpbVWWd9p1XE=");
+        background-position: bottom -400px left -450px;
+        background-repeat: no-repeat;
+        background-size: 1500px;
+        height: 93vh;
+        color:white;
+        grid-area: Mytunes;
+    }
+    .Mytunes > h1{
+        text-align: center;
+        padding-top: 75px; /* Make Changes here in media query to 35px*/
+        font-size: 47px;
+        color:white;
+    }
+    .Mytunes > h3{
+        text-align: center;
+        padding-top: 25px;
+        color:white;
+        font-size: 22px;
+    }
+    .Mytunes > p{
+        text-align: center;
+        padding-top: 25px;
+        padding-left: 60px;
+        padding-right: 60px;
+        line-height: 30px;
+        color:white;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 17px;
+    }
+    .Music{
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+        text-align: center;
+        height: 148vh;  /* Make Changes here in media query to 180px*/
+        grid-area: Music;
+    }
+    .Music > i {
+        font-size: 42px;
+        padding: 50px 5px 40px 0px;
+    }
+    .Music > span {
+        font-size: 42px;
+    }
+    .Music > .para1 {
+        color:white;
+        padding: 30px 35px 40px 35px;
+        line-height: 30px;
+        font-size: 22px;
+    }
+    .Music > a {
+        background-color: red;
+        color:white;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 18px;
+    }
+    .Music > .para2 {
+        color:white;
+        font-size: 18px;
+        padding-top: 60px;
+        padding-left: 50px;
+    }
+    .Music > img {
+        padding-bottom: 150px;
+        height: 300px; /* make changes in height & width to 300px in media query */
+        width: 300px;
+    }
+    .Video{
+        background-color: white;
+        height: 208vh; /* after decreasing height & width of video class image, increase height of video class to 280vh in media query */
+        color:black;
+        text-align: center;
+        grid-area: Video;
+    }
+    .Video > .head1 {
+        padding-top: 60px;  /* padding-top : 60px in media-query */
+        padding-bottom: 35px;
+    }
+    .Video > .para3 {
+        color: rgba(0,0,0,0.8);
+        font-size: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .Video > a {
+        background-color: rgb(24, 64, 194);
+        color:white;
+        padding: 20px;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .Video > img {
+        width: 298px; /* Make changes in width & height in media-query width:300px & height:300px */
+        height: 300px;
+    }
+    .sky{
+        height: 165vh; /* increase height to 200vh so that footer stick to the bottom */
+        color: white;
+        background-image: url("/IMG/starry-sky-2051448__340.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom 0px left 0px;
+        background-size: 3000px;
+        grid-area: sky;
+    }
+    .sky > h1 {
+        padding-top: 60px; /* Make Changes here in media query to 500px*/
+        padding-left: 70px; /* Make Changes here in media query to 100px*/
+        font-size: 34px;
+    }
+    .sky > p {
+        padding-top: 30px;
+        padding-left: 70px;
+        padding-right: 50px;
+        line-height: 35px;
+        font-size: 25px;
+    }
+    .G-Cards{
+        height: 43vh;
+        padding: 5px; /* padding : 5px in media query*/
+        background-color: white;
+        color: black;
+        grid-area: G-Cards;
+    }
+    .G-Cards > .card {
+        /* float: left;  */
+        /* comment out in media query for max-width:600px */ 
+        padding-top: 30px;
+        padding-left: 5px; /* padding : 5px in media query */
+        width: 50%;
+    }
+    .G-Cards .card > img {
+        width: 300px; /* width & height : 300px in media query */
+        height: 270px;
+    }
+    .G-Cards .card-content > h1{
+        padding-top: 320px;
+        padding-left: 80px; /* padding-left : 70px in media query */
+        color:black;
+    }
+    .G-Cards .card-content > .gpara1{
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    .G-Cards .card-content > .gpara2{
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    .G-Cards a {
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .G-Cards a::before {
+        content: ">";
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .Footer{
+        height: 135vh;   /* Make changes in media-query in height:185vh; */
+        margin-top: 380px;
+        /* Add margin-top:380px; in media query */
+        color:white;
+        padding: 64px; /* make changes in media-query in padding:50px; */
+        padding-top: 5px;
+        background-color: rgba(0,0,0,0.9);
+        grid-area: Footer;
+    }
+    .footer-content > div{
+        padding: 35px;
+        /* float: left;  */
+          /* Comment out in media query */
+    }
+    .footer > .shop {
+        width: 25%;
+    }
+    .footer > .Store {
+        width: 25%;
+    }
+    .footer > .Business {
+        width: 25%;
+    }
+    .footer > .about {
+        width: 25%;
+    }
+    .Footer ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Footer a {
+        text-decoration: none;
+        color:white;
+    }
+    .Footer-Copyright{
+        height: 8vh;
+        background-color: rgba(0,0,0,0.7);
+        color:white;
+        text-align: center;
+        font-size: 20px;
+        grid-area: Footer-Copyright;
+    }
+    .Footer-Copyright p{
+    padding: 13px;
+    }
+}
+@media only screen and (min-width:375px){
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: "nav-bar nav-bar nav-bar nav-bar"
+        "Mytunes Mytunes Mytunes Mytunes"
+        "Music Music Music Music"
+        "Video Video Video Video"
+        "sky sky sky sky"
+        "G-Cards G-Cards G-Cards G-Cards"
+        "Footer Footer Footer Footer"
+        "Footer-Copyright Footer-Copyright Footer-Copyright Footer-Copyright";
+    }
+    .nav-bar{
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        height: 7vh;
+        border-bottom: 1px solid white;
+        padding-top: 13px;
+        grid-area: nav-bar;
+    }
+    .nav-bar > a{
+        color:white;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 10px;
+    }
+    .nav-bar > a:hover{
+        color:yellow;
+    }
+    .Mytunes{
+        background-image: url("https://media.istockphoto.com/photos/studio-condenser-microphone-on-black-background-picture-id1217982570?k=20&m=1217982570&s=612x612&w=0&h=OkOmuKU4r8nk-7epT25el20lzl5p-juLpbVWWd9p1XE=");
+        background-position: bottom -430px left -450px;
+        background-repeat: no-repeat;
+        background-size: 1500px;
+        height: 83vh;
+        color:white;
+        grid-area: Mytunes;
+    }
+    .Mytunes > h1{
+        text-align: center;
+        padding-top: 75px; /* Make Changes here in media query to 35px*/
+        font-size: 44px;
+        color:white;
+    }
+    .Mytunes > h3{
+        text-align: center;
+        padding-top: 25px;
+        color:white;
+        font-size: 21px;
+    }
+    .Mytunes > p{
+        text-align: center;
+        padding-top: 25px;
+        padding-left: 60px;
+        padding-right: 60px;
+        line-height: 30px;
+        color:white;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 16px;
+    }
+    .Music{
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+        text-align: center;
+        height: 125vh;  /* Make Changes here in media query to 180px*/
+        grid-area: Music;
+    }
+    .Music > i {
+        font-size: 42px;
+        padding: 30px 5px 30px 0px;
+    }
+    .Music > span {
+        font-size: 39px;
+    }
+    .Music > .para1 {
+        color:white;
+        padding: 30px 35px 40px 35px;
+        line-height: 30px;
+        font-size: 22px;
+    }
+    .Music > a {
+        background-color: red;
+        color:white;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 18px;
+    }
+    .Music > .para2 {
+        color:white;
+        font-size: 18px;
+        padding-top: 60px;
+        padding-left: 50px;
+    }
+    .Music > img {
+        padding-bottom: 150px;
+        height: 300px; /* make changes in height & width to 300px in media query */
+        width: 300px;
+    }
+    .Video{
+        background-color: white;
+        height: 170vh; /* after decreasing height & width of video class image, increase height of video class to 280vh in media query */
+        color:black;
+        text-align: center;
+        grid-area: Video;
+    }
+    .Video > .head1 {
+        padding-top: 35px;  /* padding-top : 60px in media-query */
+        padding-bottom: 35px;
+    }
+    .Video > .para3 {
+        color: rgba(0,0,0,0.8);
+        font-size: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .Video > a {
+        background-color: rgb(24, 64, 194);
+        color:white;
+        padding: 20px;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .Video > img {
+        width: 298px; /* Make changes in width & height in media-query width:300px & height:300px */
+        height: 300px;
+    }
+    .sky{
+        height: 145vh; /* increase height to 200vh so that footer stick to the bottom */
+        color: white;
+        background-image: url("/IMG/starry-sky-2051448__340.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom 0px left 0px;
+        background-size: 3000px;
+        grid-area: sky;
+    }
+    .sky > h1 {
+        padding-top: 60px; /* Make Changes here in media query to 500px*/
+        padding-left: 70px; /* Make Changes here in media query to 100px*/
+        font-size: 34px;
+    }
+    .sky > p {
+        padding-top: 30px;
+        padding-left: 70px;
+        padding-right: 50px;
+        line-height: 35px;
+        font-size: 25px;
+    }
+    .G-Cards{
+        height: 42vh;
+        padding: 5px; /* padding : 5px in media query*/
+        background-color: white;
+        color: black;
+        grid-area: G-Cards;
+    }
+    .G-Cards > .card {
+        /* float: left;  */
+        /* comment out in media query for max-width:600px */ 
+        padding-top: 30px;
+        padding-left: 5px; /* padding : 5px in media query */
+        width: 50%;
+    }
+    .G-Cards .card > img {
+        width: 355px; /* width & height : 300px in media query */
+        height: 270px;
+    }
+    .G-Cards .card-content > h1{
+        padding-top: 330px;
+        padding-left: 120px; /* padding-left : 70px in media query */
+        color:black;
+    }
+    .G-Cards .card-content > .gpara1{
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    .G-Cards .card-content > .gpara2{
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    .G-Cards a {
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .G-Cards a::before {
+        content: ">";
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .Footer{
+        height: 123vh;   /* Make changes in media-query in height:185vh; */
+        margin-top: 380px;
+        /* Add margin-top:380px; in media query */
+        color:white;
+        padding: 64px; /* make changes in media-query in padding:50px; */
+        padding-top: 5px;
+        background-color: rgba(0,0,0,0.9);
+        grid-area: Footer;
+    }
+    .footer-content > div{
+        padding: 35px;
+        /* float: left;  */
+          /* Comment out in media query */
+    }
+    .footer > .shop {
+        width: 25%;
+    }
+    .footer > .Store {
+        width: 25%;
+    }
+    .footer > .Business {
+        width: 25%;
+    }
+    .footer > .about {
+        width: 25%;
+    }
+    .Footer ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Footer a {
+        text-decoration: none;
+        color:white;
+    }
+    .Footer-Copyright{
+        height: 8vh;
+        background-color: rgba(0,0,0,0.7);
+        color:white;
+        text-align: center;
+        font-size: 20px;
+        grid-area: Footer-Copyright;
+    }
+    .Footer-Copyright p{
+    padding: 13px;
+    }
+}
+@media only screen and (min-width:425px){
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: "nav-bar nav-bar nav-bar nav-bar"
+        "Mytunes Mytunes Mytunes Mytunes"
+        "Music Music Music Music"
+        "Video Video Video Video"
+        "sky sky sky sky"
+        "G-Cards G-Cards G-Cards G-Cards"
+        "Footer Footer Footer Footer"
+        "Footer-Copyright Footer-Copyright Footer-Copyright Footer-Copyright";
+    }
+    .nav-bar{
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        height: 7vh;
+        border-bottom: 1px solid white;
+        padding-top: 13px;
+        grid-area: nav-bar;
+    }
+    .nav-bar > a{
+        color:white;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 10px;
+    }
+    .nav-bar > a:hover{
+        color:yellow;
+    }
+    .Mytunes{
+        background-image: url("https://media.istockphoto.com/photos/studio-condenser-microphone-on-black-background-picture-id1217982570?k=20&m=1217982570&s=612x612&w=0&h=OkOmuKU4r8nk-7epT25el20lzl5p-juLpbVWWd9p1XE=");
+        background-position: bottom -480px left -400px;
+        background-repeat: no-repeat;
+        background-size: 1500px;
+        height: 78vh;
+        color:white;
+        grid-area: Mytunes;
+    }
+    .Mytunes > h1{
+        text-align: center;
+        padding-top: 75px; /* Make Changes here in media query to 35px*/
+        font-size: 44px;
+        color:white;
+    }
+    .Mytunes > h3{
+        text-align: center;
+        padding-top: 25px;
+        color:white;
+        font-size: 21px;
+    }
+    .Mytunes > p{
+        text-align: center;
+        padding-top: 18px;
+        padding-left: 60px;
+        padding-right: 60px;
+        line-height: 30px;
+        color:white;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 17px;
+    }
+    .Music{
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+        text-align: center;
+        height: 118vh;  /* Make Changes here in media query to 180px*/
+        grid-area: Music;
+    }
+    .Music > i {
+        font-size: 42px;
+        padding: 25px 5px 30px 0px;
+    }
+    .Music > span {
+        font-size: 39px;
+    }
+    .Music > .para1 {
+        color:white;
+        padding: 30px 35px 40px 35px;
+        line-height: 30px;
+        font-size: 22px;
+    }
+    .Music > a {
+        background-color: red;
+        color:white;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 18px;
+    }
+    .Music > .para2 {
+        color:white;
+        font-size: 18px;
+        padding-top: 60px;
+        padding-left: 5px;
+    }
+    .Music > img {
+        padding-bottom: 150px;
+        height: 300px; /* make changes in height & width to 300px in media query */
+        width: 300px;
+    }
+    .Video{
+        background-color: white;
+        height: 160vh; /* after decreasing height & width of video class image, increase height of video class to 280vh in media query */
+        color:black;
+        text-align: center;
+        grid-area: Video;
+    }
+    .Video > .head1 {
+        padding-top: 35px;  /* padding-top : 60px in media-query */
+        padding-bottom: 35px;
+    }
+    .Video > .para3 {
+        color: rgba(0,0,0,0.8);
+        font-size: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .Video > a {
+        background-color: rgb(24, 64, 194);
+        color:white;
+        padding: 20px;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .Video > img {
+        width: 298px; /* Make changes in width & height in media-query width:300px & height:300px */
+        height: 300px;
+    }
+    .sky{
+        height: 125vh; /* increase height to 200vh so that footer stick to the bottom */
+        color: white;
+        background-image: url("/IMG/starry-sky-2051448__340.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom 0px left 0px;
+        background-size: 3000px;
+        grid-area: sky;
+    }
+    .sky > h1 {
+        padding-top: 60px; /* Make Changes here in media query to 500px*/
+        padding-left: 70px; /* Make Changes here in media query to 100px*/
+        font-size: 34px;
+    }
+    .sky > p {
+        padding-top: 30px;
+        padding-left: 70px;
+        padding-right: 50px;
+        line-height: 35px;
+        font-size: 25px;
+    }
+    .G-Cards{
+        height: 35vh;
+        padding: 5px; /* padding : 5px in media query*/
+        background-color: white;
+        color: black;
+        grid-area: G-Cards;
+    }
+    .G-Cards > .card {
+        /* float: left;  */
+        /* comment out in media query for max-width:600px */ 
+        padding-top: 30px;
+        padding-left: 5px; /* padding : 5px in media query */
+        width: 50%;
+    }
+    .G-Cards .card > img {
+        width: 400px; /* width & height : 300px in media query */
+        height: 270px;
+    }
+    .G-Cards .card-content > h1{
+        padding-top: 320px;
+        padding-left: 140px; /* padding-left : 70px in media query */
+        color:black;
+    }
+    .G-Cards .card-content > .gpara1{
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    .G-Cards .card-content > .gpara2{
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    .G-Cards a {
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .G-Cards a::before {
+        content: ">";
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .Footer{
+        height: 123vh;   /* Make changes in media-query in height:185vh; */
+        margin-top: 380px;
+        /* Add margin-top:380px; in media query */
+        color:white;
+        padding: 64px; /* make changes in media-query in padding:50px; */
+        padding-top: 5px;
+        background-color: rgba(0,0,0,0.9);
+        grid-area: Footer;
+    }
+    .footer-content > div{
+        padding: 35px;
+        /* float: left;  */
+          /* Comment out in media query */
+    }
+    .footer > .shop {
+        width: 25%;
+    }
+    .footer > .Store {
+        width: 25%;
+    }
+    .footer > .Business {
+        width: 25%;
+    }
+    .footer > .about {
+        width: 25%;
+    }
+    .Footer ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Footer a {
+        text-decoration: none;
+        color:white;
+    }
+    .Footer-Copyright{
+        height: 8vh;
+        background-color: rgba(0,0,0,0.7);
+        color:white;
+        text-align: center;
+        font-size: 20px;
+        grid-area: Footer-Copyright;
+    }
+    .Footer-Copyright p{
+    padding: 13px;
+    }
+}
+@media only screen and (min-width:768px){
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: "nav-bar nav-bar nav-bar nav-bar"
+        "Mytunes Mytunes Mytunes Mytunes"
+        "Music Music Music Music"
+        "Video Video Video Video"
+        "sky sky sky sky"
+        "G-Cards G-Cards G-Cards G-Cards"
+        "Footer Footer Footer Footer"
+        "Footer-Copyright Footer-Copyright Footer-Copyright Footer-Copyright";
+    }
+    .nav-bar{
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        height: 7vh;
+        border-bottom: 1px solid white;
+        padding-top: 8px;
+        grid-area: nav-bar;
+    }
+    .nav-bar > a{
+        color:white;
+        font-size: 28px;
+        text-decoration: none;
+        padding: 27px;
+    }
+    .nav-bar > a:hover{
+        color:yellow;
+    }
+    .Mytunes{
+        background-image: url("https://media.istockphoto.com/photos/studio-condenser-microphone-on-black-background-picture-id1217982570?k=20&m=1217982570&s=612x612&w=0&h=OkOmuKU4r8nk-7epT25el20lzl5p-juLpbVWWd9p1XE=");
+        background-position: bottom -650px left -400px;
+        background-repeat: no-repeat;
+        background-size: 2130px;
+        height: 100vh;
+        color:white;
+        grid-area: Mytunes;
+    }
+    .Mytunes > h1{
+        text-align: center;
+        padding-top: 185px; /* Make Changes here in media query to 35px*/
+        font-size: 97px;
+        color:white;
+    }
+    .Mytunes > h3{
+        text-align: center;
+        padding-top: 25px;
+        color:white;
+        font-size: 42px;
+    }
+    .Mytunes > p{
+        text-align: center;
+        padding-top: 25px;
+        padding-left: 60px;
+        padding-right: 60px;
+        line-height: 30px;
+        color:white;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 22   px;
+    }
+    .Music{
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+        text-align: center;
+        height: 163vh;  /* Make Changes here in media query to 180px*/
+        grid-area: Music;
+    }
+    .Music > i {
+        font-size: 42px;
+        padding: 50px 5px 40px 0px;
+    }
+    .Music > span {
+        font-size: 42px;
+    }
+    .Music > .para1 {
+        color:white;
+        padding: 30px 35px 40px 35px;
+        line-height: 30px;
+        font-size: 22px;
+    }
+    .Music > a {
+        background-color: red;
+        color:white;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 18px;
+    }
+    .Music > .para2 {
+        color:white;
+        font-size: 18px;
+        padding-top: 60px;
+        padding-left: 50px;
+    }
+    .Music > img {
+        padding-bottom: 150px;
+        height: 700px; /* make changes in height & width to 300px in media query */
+        width: 700px;
+    }
+    .Video{
+        background-color: white;
+        height: 195vh; /* after decreasing height & width of video class image, increase height of video class to 280vh in media query */
+        color:black;
+        text-align: center;
+        grid-area: Video;
+    }
+    .Video > .head1 {
+        padding-top: 40px;  /* padding-top : 60px in media-query */
+        padding-bottom: 35px;
+    }
+    .Video > .para3 {
+        color: rgba(0,0,0,0.8);
+        font-size: 25px;
+        line-height: 36px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .Video > a {
+        background-color: rgb(24, 64, 194);
+        color:white;
+        padding: 20px;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .Video > img {
+        width: 700px; /* Make changes in width & height in media-query width:300px & height:300px */
+        height: 700px;
+    }
+    .sky{
+        height: 100vh; /* increase height to 200vh so that footer stick to the bottom */
+        color: white;
+        background-image: url("/IMG/starry-sky-2051448__340.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom 0px left 0px;
+        background-size: 1050px;
+        grid-area: sky;
+    }
+    .sky > h1 {
+        padding-top: 160px; /* Make Changes here in media query to 500px*/
+        padding-left: 110px; /* Make Changes here in media query to 100px*/
+        font-size: 34px;
+    }
+    .sky > p {
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 20px;
+        line-height: 35px;
+        font-size: 25px;
+    }
+    .G-Cards{
+        height: 75vh;
+        padding: 10px; /* padding : 5px in media query*/
+        background-color: white;
+        color: black;
+        grid-area: G-Cards;
+    }
+    .G-Cards > .card {
+        /* float: left;  */
+        /* comment out in media query for max-width:600px */
+        padding-top: 40px;
+        padding-left: 40px; /* padding : 5px in media query */
+        width: 50%;
+    }
+    .G-Cards .card > img {
+        width: 650px; /* width & height : 300px in media query */
+        height: 500px;
+    }
+    .G-Cards .card-content > h1{
+        padding-top: 590px;
+        padding-left: 40px; /* padding-left : 70px in media query */
+        color:black;
+    }
+    .G-Cards .card-content > .gpara1{
+        padding-top: 20px;
+        padding-left: 40px;
+        font-size: 20px;
+    }
+    .G-Cards .card-content > .gpara2{
+        padding-top: 20px;
+        padding-left: 40px;
+        font-size: 20px;
+    }
+    .G-Cards a {
+        padding-left: 40px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .G-Cards a::before {
+        content: ">";
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .Footer{
+        height: 31vh;   /* Make changes in media-query in height:185vh; */
+        /* Add margin-top:380px; in media query */
+        color:white;
+        padding: 10px; /* make changes in media-query in padding:50px; */
+        background-color: rgba(0,0,0,0.9);
+        grid-area: Footer;
+    }
+    .footer-content > div{
+        padding: 28px;
+        float: left;   /* Comment out in media query */
+    }
+    .footer > .shop {
+        width: 25%;
+    }
+    .footer > .Store {
+        width: 25%;
+    }
+    .footer > .Business {
+        width: 25%;
+    }
+    .footer > .about {
+        width: 25%;
+    }
+    .Footer ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Footer a {
+        text-decoration: none;
+        color:white;
+    }
+    .Footer-Copyright{
+        height: 7vh;
+        background-color: rgba(0,0,0,0.7);
+        color:white;
+        text-align: center;
+        font-size: 23px;
+        grid-area: Footer-Copyright;
+    }
+    .Footer-Copyright p{
+    padding: 10px;
+    }
+}
+@media only screen and (min-width:1024px){
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: "nav-bar nav-bar nav-bar nav-bar"
+        "Mytunes Mytunes Mytunes Mytunes"
+        "Music Music Music Music"
+        "Video Video Video Video"
+        "sky sky sky sky"
+        "G-Cards G-Cards G-Cards G-Cards"
+        "Footer Footer Footer Footer"
+        "Footer-Copyright Footer-Copyright Footer-Copyright Footer-Copyright";
+    }
+    .nav-bar{
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        height: 7vh;
+        border-bottom: 1px solid white;
+        padding-top: 7px;
+        grid-area: nav-bar;
+    }
+    .nav-bar > a{
+        color:white;
+        font-size: 28px;
+        text-decoration: none;
+        padding: 30px;
+    }
+    .nav-bar > a:hover{
+        color:yellow;
+    }
+    .Mytunes{
+        background-image: url("https://media.istockphoto.com/photos/studio-condenser-microphone-on-black-background-picture-id1217982570?k=20&m=1217982570&s=612x612&w=0&h=OkOmuKU4r8nk-7epT25el20lzl5p-juLpbVWWd9p1XE=");
+        background-position: bottom -650px left -150px;
+        background-repeat: no-repeat;
+        background-size: 2130px;
+        height: 100vh;
+        color:white;
+        grid-area: Mytunes;
+    }
+    .Mytunes > h1{
+        text-align: center;
+        padding-top: 255px; /* Make Changes here in media query to 35px*/
+        font-size: 97px;
+        color:white;
+    }
+    .Mytunes > h3{
+        text-align: center;
+        padding-top: 25px;
+        color:white;
+        font-size: 42px;
+    }
+    .Mytunes > p{
+        text-align: center;
+        padding-top: 25px;
+        padding-left: 60px;
+        padding-right: 60px;
+        line-height: 30px;
+        color:white;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 22px;
+    }
+    .Music{
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+        text-align: center;
+        height: 145vh;  /* Make Changes here in media query to 180px*/
+        grid-area: Music;
+    }
+    .Music > i {
+        font-size: 42px;
+        padding: 50px 5px 40px 0px;
+    }
+    .Music > span {
+        font-size: 42px;
+    }
+    .Music > .para1 {
+        color:white;
+        padding: 30px 35px 40px 35px;
+        line-height: 30px;
+        font-size: 22px;
+    }
+    .Music > a {
+        background-color: red;
+        color:white;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 18px;
+    }
+    .Music > .para2 {
+        color:white;
+        font-size: 18px;
+        padding-top: 60px;
+        padding-left: 50px;
+    }
+    .Music > img {
+        padding-bottom: 150px;
+        height: 700px; /* make changes in height & width to 300px in media query */
+        width: 700px;
+    }
+    .Video{
+        background-color: white;
+        height: 138vh; /* after decreasing height & width of video class image, increase height of video class to 280vh in media query */
+        color:black;
+        text-align: center;
+        grid-area: Video;
+    }
+    .Video > .head1 {
+        padding-top: 30px;  /* padding-top : 60px in media-query */
+        padding-bottom: 35px;
+    }
+    .Video > .para3 {
+        color: rgba(0,0,0,0.8);
+        font-size: 25px;
+        line-height: 36px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .Video > a {
+        background-color: rgb(24, 64, 194);
+        color:white;
+        padding: 20px;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .Video > img {
+        width: 700px; /* Make changes in width & height in media-query width:300px & height:300px */
+        height: 600px;
+    }
+    .sky{
+        height: 83vh; /* increase height to 200vh so that footer stick to the bottom */
+        color: white;
+        background-image: url("/IMG/starry-sky-2051448__340.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom 0px left 0px;
+        background-size: 1150px;
+        grid-area: sky;
+    }
+    .sky > h1 {
+        padding-top: 200px; /* Make Changes here in media query to 500px*/
+        padding-left: 110px; /* Make Changes here in media query to 100px*/
+        font-size: 34px;
+    }
+    .sky > p {
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 20px;
+        line-height: 35px;
+        font-size: 25px;
+    }
+    .G-Cards{
+        height: 3vh;
+        padding: 10px; /* padding : 5px in media query*/
+        background-color: white;
+        color: black;
+        grid-area: G-Cards;
+    }
+    .G-Cards > .card {
+        float: left; 
+        /* comment out in media query for max-width:600px */
+        padding-top: 40px;
+        padding-left: 40px; /* padding : 5px in media query */
+        width: 50%;
+    }
+    .G-Cards .card > img {
+        width: 480px; /* width & height : 300px in media query */
+        height: 300px;
+    }
+    .G-Cards .card-content > h1{
+        padding-top: 50px;
+        padding-left: 40px; /* padding-left : 70px in media query */
+        color:black;
+    }
+    .G-Cards .card-content > .gpara1{
+        padding-top: 20px;
+        padding-left: 40px;
+        font-size: 20px;
+    }
+    .G-Cards .card-content > .gpara2{
+        padding-top: 20px;
+        padding-left: 40px;
+        font-size: 20px;
+    }
+    .G-Cards a {
+        padding-left: 40px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .G-Cards a::before {
+        content: ">";
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .Footer{
+        height: 37vh;   /* Make changes in media-query in height:185vh; */
+        /* Add margin-top:380px; in media query */
+        color:white;
+        padding: 10px 70px; /* make changes in media-query in padding:50px; */
+        background-color: rgba(0,0,0,0.9);
+        grid-area: Footer;
+    }
+    .footer-content > div{
+        padding: 55px;
+        float: left;   /* Comment out in media query */
+    }
+    .footer > .shop {
+        width: 25%;
+    }
+    .footer > .Store {
+        width: 25%;
+    }
+    .footer > .Business {
+        width: 25%;
+    }
+    .footer > .about {
+        width: 25%;
+    }
+    .Footer ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Footer a {
+        text-decoration: none;
+        color:white;
+    }
+    .Footer-Copyright{
+        height: 10vh;
+        background-color: rgba(0,0,0,0.7);
+        color:white;
+        text-align: center;
+        font-size: 23px;
+        grid-area: Footer-Copyright;
+    }
+    .Footer-Copyright p{
+    padding: 23px;
+    }
+}
+@media only screen and (min-width:1440px){
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: "nav-bar nav-bar nav-bar nav-bar"
+        "Mytunes Mytunes Mytunes Mytunes"
+        "Music Music Music Music"
+        "Video Video Video Video"
+        "sky sky sky sky"
+        "G-Cards G-Cards G-Cards G-Cards"
+        "Footer Footer Footer Footer"
+        "Footer-Copyright Footer-Copyright Footer-Copyright Footer-Copyright";
+    }
+    .nav-bar{
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        height: 7vh;
+        border-bottom: 1px solid white;
+        padding-top: 10px;
+        grid-area: nav-bar;
+    }
+    .nav-bar > a{
+        color:white;
+        font-size: 35px;
+        text-decoration: none;
+        padding: 35px;
+    }
+    .nav-bar > a:hover{
+        color:yellow;
+    }
+    .Mytunes{
+        background-image: url("https://media.istockphoto.com/photos/studio-condenser-microphone-on-black-background-picture-id1217982570?k=20&m=1217982570&s=612x612&w=0&h=OkOmuKU4r8nk-7epT25el20lzl5p-juLpbVWWd9p1XE=");
+        background-position: bottom -1380px left -600px;
+        background-repeat: no-repeat;
+        background-size: 3730px;
+        height: 95vh;
+        color:white;
+        grid-area: Mytunes;
+    }
+    .Mytunes > h1{
+        text-align: center;
+        padding-top: 255px; /* Make Changes here in media query to 35px*/
+        font-size: 107px;
+        color:white;
+    }
+    .Mytunes > h3{
+        text-align: center;
+        padding-top: 35px;
+        color:white;
+        font-size: 42px;
+    }
+    .Mytunes > p{
+        text-align: center;
+        padding-top: 35px;
+        padding-left: 90px;
+        padding-right: 90px;
+        line-height: 40px;
+        color:white;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+    .Music{
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+        text-align: center;
+        height: 155vh;  /* Make Changes here in media query to 180px*/
+        grid-area: Music;
+    }
+    .Music > i {
+        font-size: 52px;
+        padding: 60px 5px 40px 0px;
+    }
+    .Music > span {
+        font-size: 52px;
+    }
+    .Music > .para1 {
+        color:white;
+        padding: 30px 138px 40px 138px;
+        line-height: 30px;
+        font-size: 25px;
+    }
+    .Music > a {
+        background-color: red;
+        color:white;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 18px;
+    }
+    .Music > .para2 {
+        color:white;
+        font-size: 18px;
+        padding-top: 60px;
+        padding-left: 50px;
+    }
+    .Music > img {
+        padding-bottom: 150px;
+        height: 950px; /* make changes in height & width to 300px in media query */
+        width: 1150px;
+    }
+    .Video{
+        background-color: white;
+        height: 160vh; /* after decreasing height & width of video class image, increase height of video class to 280vh in media query */
+        color:black;
+        text-align: center;
+        grid-area: Video;
+    }
+    .Video > .head1 {
+        padding-top: 50px;  /* padding-top : 60px in media-query */
+        padding-bottom: 35px;
+    }
+    .Video > .para3 {
+        color: rgba(0,0,0,0.8);
+        font-size: 28px;
+        line-height: 36px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .Video > a {
+        background-color: rgb(24, 64, 194);
+        color:white;
+        padding: 20px;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .Video > img {
+        width: 1250px; /* Make changes in width & height in media-query width:300px & height:300px */
+        height: 1000px;
+    }
+    .sky{
+        height: 110vh; /* increase height to 200vh so that footer stick to the bottom */
+        color: white;
+        background-image: url("/IMG/starry-sky-2051448__340.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom 0px left 0px;
+        text-align: center;
+        background-size: 1450px;
+        grid-area: sky;
+    }
+    .sky > h1 {
+        padding-top: 400px; /* Make Changes here in media query to 500px*/
+        padding-left: 110px; /* Make Changes here in media query to 100px*/
+        font-size: 45px;
+    }
+    .sky > p {
+        padding-top: 30px;
+        padding-left: 80px;
+        padding-right: 90px;
+        line-height: 35px;
+        font-size: 30px;
+    }
+    .G-Cards{
+        height: 15vh;
+        padding: 10px; /* padding : 5px in media query*/
+        background-color: white;
+        color: black;
+        grid-area: G-Cards;
+    }
+    .G-Cards > .card {
+        float: left; 
+        /* comment out in media query for max-width:600px */
+        padding-top: 40px;
+        padding-left: 40px; /* padding : 5px in media query */
+        width: 50%;
+    }
+    .G-Cards .card > img {
+        width: 630px; /* width & height : 300px in media query */
+        height: 400px;
+    }
+    .G-Cards .card-content > h1{
+        padding-top: 70px;
+        padding-left: 40px; /* padding-left : 70px in media query */
+        color:black;
+    }
+    .G-Cards .card-content > .gpara1{
+        padding-top: 20px;
+        padding-left: 40px;
+        font-size: 28px;
+    }
+    .G-Cards .card-content > .gpara2{
+        padding-top: 20px;
+        padding-left: 40px;
+        font-size: 28px;
+    }
+    .G-Cards a {
+        padding-left: 40px;
+        text-decoration: none;
+        font-size: 28px;
+    }
+    .G-Cards a::before {
+        content: ">";
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .Footer{
+        height: 40vh;   /* Make changes in media-query in height:185vh; */
+        /* Add margin-top:380px; in media query */
+        color:white;
+        padding: 0px 30px 0px 30px; /* make changes in media-query in padding:50px; */
+        background-color: rgba(0,0,0,0.9);
+        grid-area: Footer;
+    }
+    .footer-content > div{
+        padding: 105px;
+        float: left;   /* Comment out in media query */
+    }
+    .footer > .shop {
+        width: 25%;
+    }
+    .footer > .Store {
+        width: 25%;
+    }
+    .footer > .Business {
+        width: 25%;
+    }
+    .footer > .about {
+        width: 25%;
+    }
+    .Footer ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Footer a {
+        text-decoration: none;
+        color:white;
+    }
+    .Footer-Copyright{
+        height: 10vh;
+        background-color: rgba(0,0,0,0.7);
+        color:white;
+        text-align: center;
+        font-size: 29px;
+        grid-area: Footer-Copyright;
+    }
+    .Footer-Copyright p{
+    padding:30px;
+    }
+}
+@media only screen and (min-width:2560px){
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: "nav-bar nav-bar nav-bar nav-bar"
+        "Mytunes Mytunes Mytunes Mytunes"
+        "Music Music Music Music"
+        "Video Video Video Video"
+        "sky sky sky sky"
+        "G-Cards G-Cards G-Cards G-Cards"
+        "Footer Footer Footer Footer"
+        "Footer-Copyright Footer-Copyright Footer-Copyright Footer-Copyright";
+    }
+    .nav-bar{
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        height: 5vh;
+        border-bottom: 1px solid white;
+        padding-top: 8px;
+        grid-area: nav-bar;
+    }
+    .nav-bar > a{
+        color:white;
+        font-size: 50px;
+        text-decoration: none;
+        padding: 45px;
+    }
+    .nav-bar > a:hover{
+        color:yellow;
+    }
+    .Mytunes{
+        background-image: url("https://media.istockphoto.com/photos/studio-condenser-microphone-on-black-background-picture-id1217982570?k=20&m=1217982570&s=612x612&w=0&h=OkOmuKU4r8nk-7epT25el20lzl5p-juLpbVWWd9p1XE=");
+        background-position: bottom -2200px left -750px;
+        background-repeat: no-repeat;
+        background-size: 5930px;
+        height: 90vh;
+        color:white;
+        grid-area: Mytunes;
+    }
+    .Mytunes > h1{
+        text-align: center;
+        padding-top: 580px; /* Make Changes here in media query to 35px*/
+        font-size: 135px;
+        color:white;
+    }
+    .Mytunes > h3{
+        text-align: center;
+        padding-top: 35px;
+        color:white;
+        font-size: 62px;
+    }
+    .Mytunes > p{
+        text-align: center;
+        padding-top: 35px;
+        padding-left: 150px;
+        padding-right: 150px;
+        line-height: 50px;
+        color:white;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 44px;
+    }
+    .Music{
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+        text-align: center;
+        height: 98vh;  /* Make Changes here in media query to 180px*/
+        grid-area: Music;
+    }
+    .Music > i {
+        font-size: 57px;
+        padding: 90px 5px 40px 0px;
+    }
+    .Music > span {
+        font-size: 57px;
+    }
+    .Music > .para1 {
+        color:white;
+        padding: 30px 698px 40px 698px;
+        line-height: 30px;
+        font-size: 25px;
+    }
+    .Music > a {
+        background-color: red;
+        color:white;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 18px;
+    }
+    .Music > .para2 {
+        color:white;
+        font-size: 18px;
+        padding-top: 60px;
+        padding-left: 50px;
+    }
+    .Music > img {
+        padding-bottom: 150px;
+        height: 1150px; /* make changes in height & width to 300px in media query */
+        width: 1550px;
+    }
+    .Video{
+        background-color: white;
+        height: 103vh; /* after decreasing height & width of video class image, increase height of video class to 280vh in media query */
+        color:black;
+        text-align: center;
+        grid-area: Video;
+    }
+    .Video > .head1 {
+        padding-top: 120px;  /* padding-top : 60px in media-query */
+        padding-bottom: 35px;
+    }
+    .Video > .para3 {
+        color: black;
+        font-size: 36px;
+        line-height: 38px;
+        padding-left: 400px;
+        padding-right: 400px;
+    }
+    .Video > a {
+        background-color: rgb(24, 64, 194);
+        color:white;
+        padding: 20px;
+        font-size: 23px;
+        text-decoration: none;
+    }
+    .Video > img {
+        width: 1450px; /* Make changes in width & height in media-query width:300px & height:300px */
+        height: 1150px;
+    }
+    .sky{
+        height: 80vh; /* increase height to 200vh so that footer stick to the bottom */
+        color: white;
+        background-image: url("/IMG/starry-sky-2051448__340.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom 0px left 0px;
+        text-align: center;
+        background-size: 2650px;
+        grid-area: sky;
+    }
+    .sky > h1 {
+        padding-top: 500px; /* Make Changes here in media query to 500px*/
+        padding-left: 110px; /* Make Changes here in media query to 100px*/
+        font-size: 69px;
+    }
+    .sky > p {
+        padding-top: 30px;
+        padding-left: 80px;
+        padding-right: 90px;
+        line-height: 45px;
+        font-size: 42px;
+    }
+    .G-Cards{
+        height: 21vh;
+        padding: 10px; /* padding : 5px in media query*/
+        background-color: white;
+        color: black;
+        grid-area: G-Cards;
+    }
+    .G-Cards > .card {
+        float: left; 
+        /* comment out in media query for max-width:600px */
+        padding-top: 50px;
+        padding-left: 40px; /* padding : 5px in media query */
+        width: 50%;
+    }
+    .G-Cards .card > img {
+        width: 1130px; /* width & height : 300px in media query */
+        height: 600px;
+    }
+    .G-Cards .card-content > h1{
+        padding-top: 120px;
+        padding-left: 30px; /* padding-left : 70px in media query */
+        font-size: 52px;
+        color:black;
+    }
+    .G-Cards .card-content > .gpara1{
+        padding-top: 25px;
+        padding-left: 30px;
+        font-size: 41px;
+    }
+    .G-Cards .card-content > .gpara2{
+        padding-top: 20px;
+        padding-left: 30px;
+        font-size: 41px;
+    }
+    .G-Cards a {
+        padding-left: 40px;
+        text-decoration: none;
+        font-size: 41px;
+    }
+    .G-Cards a::before {
+        content: ">";
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .Footer{
+        height: 4vh;   /* Make changes in media-query in height:185vh; */
+        /* Add margin-top:380px; in media query */
+        color:white;
+        padding: 40px 250px 550px 250px; /* make changes in media-query in padding:50px; */
+        background-color: rgba(0,0,0,0.9);
+        font-size: 32px;
+        grid-area: Footer;
+    }
+    .footer-content > div{
+        padding: 105px;
+        float: left;   /* Comment out in media query */
+    }
+    .footer > .shop {
+        width: 25%;
+    }
+    .footer > .Store {
+        width: 25%;
+    }
+    .footer > .Business {
+        width: 25%;
+    }
+    .footer > .about {
+        width: 25%;
+    }
+    .Footer ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Footer a {
+        text-decoration: none;
+        color:white;
+    }
+    .Footer-Copyright{
+        height: 7vh;
+        background-color: rgba(0,0,0,0.7);
+        color:white;
+        text-align: center;
+        font-size: 45px;
+        grid-area: Footer-Copyright;
+    }
+    .Footer-Copyright p{
+    padding: 30px;
+    }  
+}
